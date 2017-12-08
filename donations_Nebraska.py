@@ -12,7 +12,7 @@ app = Flask(__name__)
 #COLLECTION_NAME = 'projects'
 #MONGO_URI = 'mongodb://root:donorusa@ds257245.mlab.com:57245/donors_usa'
 MONGO_URI = os.getenv('MONGODB_URI', 'mongodb://localhost:27017')
-DBS_NAME = os.getenv('MONGO_DB_NAME', 'donors_usa')
+DBS_NAME = os.getenv('MONGO_DB_NAME', 'donorsUSA')
 COLLECTION_NAME = 'projects'
 
 @app.route('/')
