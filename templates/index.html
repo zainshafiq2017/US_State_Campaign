@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body class="application">
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
       <button class="pull-left navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
         <span class="icon-bar"></span>
@@ -20,13 +20,13 @@
       </button>
       <div class="collapse navbar-collapse navHeaderCollapse">
         <ul class ="nav navbar-nav">
-          <li><a class="navbar-brand" href="./">Funding Status Dashboard</a></li>
-          <li><a class="navbar-brand" href="javascript:dc.filterAll();dc.redrawAll();">Reset</a></li>
-          <li><a class="navbar-brand" href="/about_us">About US</a></li>
+          <li class ="active"><a href="./"><strong>Funding Status Dashboard</strong></a></li>
+          <li class="nav-item"><a class="nav-link" href="javascript:dc.filterAll();dc.redrawAll();"><strong>Reset</strong></a></li>
+          <li class="nav-item"><a class="nav-link" href="/about_us"><strong>About US</strong></a></li>
         </ul>
       </div>
     </div>
-  </div>
+  </nav>
   <div  id="outer" class="container-fluid">
       <div class="row justify-content-end">
         <!-- Metric 1 -->
