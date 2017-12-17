@@ -94,7 +94,7 @@ function makeGraphs(error, donorsUSProjects) {
         }
     });
     var numProjectstotalPriceExcludingOptional2 = dateDim.group().reduceSum(function (d) {
-        if (d.total_price_excluding_optional_support > 300 && d.total_price_excluding_optional_support < 600){
+        if (d.total_price_excluding_optional_support >= 300 && d.total_price_excluding_optional_support < 600){
             return d.num_donors;
         }
         else{
@@ -102,7 +102,7 @@ function makeGraphs(error, donorsUSProjects) {
         }
     });
     var numProjectstotalPriceExcludingOptional3 = dateDim.group().reduceSum(function (d) {
-        if (d.total_price_excluding_optional_support > 600){
+        if (d.total_price_excluding_optional_support >= 600){
             return d.num_donors;
         }
         else{
@@ -182,19 +182,6 @@ function makeGraphs(error, donorsUSProjects) {
         .group(studentsReached)
         .formatNumber(d3.format(".3s"));
 
-    /*timeChart
-        .ordinalColors(["#C96A23"])
-        .width(1200)
-        .height(300)
-        .margins({top: 30, right: 50, bottom: 30, left: 50})
-        .dimension(dateDim)
-        .group(numProjectsByDate)
-        .renderArea(true)
-        .transitionDuration(500)
-        .x(d3.time.scale().domain([minDate, maxDate]))
-        .elasticY(true)
-        .xAxisLabel("Year")
-        .yAxis().ticks(6);*/
 
     // This chart shows price excluding optional support
     totalPriceExcludingOptionalChart
@@ -223,7 +210,7 @@ function makeGraphs(error, donorsUSProjects) {
         .renderTitle(true);
 
     resourceTypeChart
-        .ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
+        //.ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
         .width(300)
         .height(250)
         .dimension(resourceTypeDim)
@@ -231,7 +218,7 @@ function makeGraphs(error, donorsUSProjects) {
         .xAxis().ticks(4);
 
     povertyLevelChart
-        .ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
+        //.ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
         .width(300)
         .height(250)
         .dimension(povertyLevelDim)
@@ -239,7 +226,7 @@ function makeGraphs(error, donorsUSProjects) {
         .xAxis().ticks(4);
 
     primaryFocusAreaChart
-        .ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
+        //.ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
         .width(300)
         .height(250)
         .dimension(primaryFocusAreaDim)
@@ -247,7 +234,7 @@ function makeGraphs(error, donorsUSProjects) {
         .xAxis().ticks(6);
 
     fundingStatusChart
-        .ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
+        //.ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#D3D1C5", "#F5821F"])
         .height(220)
         .radius(90)
         .innerRadius(40)
@@ -256,7 +243,7 @@ function makeGraphs(error, donorsUSProjects) {
         .group(numProjectsByFundingStatus);
 
     teacherPrefixChart
-        .ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#de2cce", "#F5821F"])
+        //.ordinalColors(["#79CED7", "#66AFB2", "#C96A23", "#de2cce", "#F5821F"])
         .height(220)
         .radius(90)
         .innerRadius(40)
@@ -265,7 +252,7 @@ function makeGraphs(error, donorsUSProjects) {
         .group(numProjectsByPrefixTeacher);
 
     secondaryFocusAreaChart
-        .ordinalColors(["#dbde2c", "#66AFB2", "#C96A23", "#D3D1C5", "#df4524"])
+        //.ordinalColors(["#dbde2c", "#66AFB2", "#C96A23", "#D3D1C5", "#df4524"])
         .height(220)
         .radius(90)
         .innerRadius(40)
