@@ -19,35 +19,7 @@ are in different type of charts. I've downloaded the data from DonorsChoose.org 
 I've used MongoDB for storing data, Python for building a web server that interacts with MongoDB and serves HTML pages, dc, d3 and crossfilter.
 
 ## PROJECT STRUCTURE
-|-- static
-|   |-- css
-|   |   |-- custom.css
-|   |-- images
-|   |   |-- Vote.jpg
-|   |-- js
-|   |   |-- graph.js
-|   |   |-- script.js
-|   |-- lib
-|   |   |-- css
-|   |   |   |-- bootstrap.min.css
-|   |   |   |-- dc.css
-|   |   |   |-- keen-dashboards.css
-|   |   |-- js
-|   |   |   |-- bootstrap.min.js
-|   |   |   |-- crossfilter.js
-|   |   |   |-- d3.js
-|   |   |   |-- dc.js
-|   |   |   |-- jquery.min.js
-|   |   |   |-- keen.min.js
-|   |   |   |-- queue.js
-|-- templates
-|   |-- about_us.html
-|   |-- index.html
-|-- .gitignore
-|-- donations_Nebraska.py
-|-- Procfile
-|-- README.md
-|-- requirements.txt
+![screenshot 4](static/images/readme4.jpg?raw=true "screenshot 4")
 
 ## PROJECT SOURCE
 Project source can be download from the following link:
@@ -62,7 +34,7 @@ https://github.com/zainshafiq2017/US_State_Campaign.git
 ### WHAT PROBLEM THIS WEBSITE SOLVE?
 To win the US electoral campaign, we need to display a webapp that shows the status of funds donated to school projects through graphs.
 
-###PROJECT OBJECTIVE
+### PROJECT OBJECTIVE
 The goal of this project is to use javascript libraries like dc, d3, crossfilter and MongoDB to create interactive data visualization.
 
 ### HOW DOES IT WORK
@@ -116,7 +88,7 @@ mongoimport -d donorsUSA -c projects --type csv --file opendata_projects_clean.c
  - View your app on browser:
    `heroku open`
 
-##Description pages
+## Description pages
 **donation_Nebraska.py**
  - In this page I've imported flask(web framework), pymongo module for mongoDB to use, json to convert DB in json format.
    Added `routes` to bind a URL to a specfic HTML page using function render_templates, and to connect our MongoDB to extract data in json format.
@@ -140,7 +112,7 @@ mongoimport -d donorsUSA -c projects --type csv --file opendata_projects_clean.c
  - Defined dimensions, groups and range.
  - With `dc.renderAll()` we can finally display numbers and charts
 
-##Description of graphs and total counted data
+## Description of graphs and total counted data
  - At top of the pages I'm displaying:
    - Total number of donations: This number is obtained by grouping all value in .group function
    - Number of donors: This is sum of our column "num_donors" using reduceSum function.
@@ -148,8 +120,8 @@ mongoimport -d donorsUSA -c projects --type csv --file opendata_projects_clean.c
    - Number of students reached: This is sum of our column "students_reached" using reduceSum function.
    - Donation states: This is the selection menu to display American states.
  - Charts
-   - Prices excluding optional support: This line chart show price excluding optional support disaggregated by ranges: >0<300$ 
-     >=300$<600$ and >=600$. I used "date_posted" for x values and for y values the total of num_donor based on range prices(total_price_excluding_optional_support).
+   - Prices excluding optional support: This line chart show price excluding optional support disaggregated by ranges: >0<300$ >=300$<600$ and >=600$.
+     I used "date_posted" for x values and for y values the total of num_donor based on range prices(total_price_excluding_optional_support).
      In this chart we can see also legend and title informations.
    - Funding status: This pie chart shows the funding status of donations. To get this result I used "funding status" field for 
      dimension and group functions.
@@ -165,7 +137,7 @@ mongoimport -d donorsUSA -c projects --type csv --file opendata_projects_clean.c
  - At the end of the page I've added also tables that are interact with other graphs. The tables show the following fields: `funding_status, school_state, resource_type, poverty_level, total_price_excluding_optional_support, num_donors`
    To create it I've just created div including styling with giving id that we need for dc reference. In graph.js the data table has been implemented.
 
-##TECHNOLOGY USED
+## TECHNOLOGY USED
 [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 [crossfilter](http://square.github.io/crossfilter/)
 A javascript based data manipulation library. Works splendid with dc.js. Enables two way data binding.
