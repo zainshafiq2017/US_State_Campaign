@@ -21,7 +21,7 @@
       <div class="collapse navbar-collapse navHeaderCollapse">
         <ul class ="nav navbar-nav">
           <li class ="active"><a href="./"><strong>Funding Status Dashboard</strong></a></li>
-          <li class="nav-item"><a class="nav-link" href="javascript:dc.filterAll();dc.redrawAll();"><strong>Reset</strong></a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="reset_all()"><strong>Reset</strong></a></li>
           <li class="nav-item"><a class="nav-link" href="/about_us"><strong>About US</strong></a></li>
         </ul>
       </div>
@@ -43,7 +43,7 @@
               text-align: center;
               padding-top: 12px;
               padding-bottom: 0px;">
-              <div id="number-projects-nd"></div>
+              <div id="number-projects-nd" class="text-size"></div>
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@
               Number of donors
             </div>
             <div class="chart-stage">
-              <div id="num-donors-nd"></div>
+              <div id="num-donors-nd" class="text-size"></div>
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@
               Total Donations in USD
             </div>
             <div class="chart-stage">
-              <div id="total-donations-nd"></div>
+              <div id="total-donations-nd" class="text-size"></div>
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@
               Number of students Reached
             </div>
             <div class="chart-stage">
-              <div id="total-students-reached-nd"></div>
+              <div id="total-students-reached-nd" class="text-size"></div>
             </div>
           </div>
         </div>
@@ -253,5 +253,6 @@
   <script src="{{ url_for ('static', filename='lib/js/queue.js')}}"></script>
   <script src="{{ url_for ('static', filename='lib/js/keen.min.js')}}"></script>
   <script src="{{ url_for ('static', filename='js/graph.js')}}"></script>
+  <script src="{{ url_for ('static', filename='js/script.js')}}"></script>
 </body>
 </html>
