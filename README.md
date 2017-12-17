@@ -138,19 +138,31 @@ mongoimport -d donorsUSA -c projects --type csv --file opendata_projects_clean.c
    To create it I've just created div including styling with giving id that we need for dc reference. In graph.js the data table has been implemented.
 
 ## TECHNOLOGY USED
+--
 [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+--
 [crossfilter](http://square.github.io/crossfilter/)
 A javascript based data manipulation library. Works splendid with dc.js. Enables two way data binding.
+--
 [DC](https://dc-js.github.io/dc.js/)
 A javascript based wrapper library for D3.js which makes plotting the charts a lot easier.
+--
 [D3](https://github.com/d3/d3/wiki)
 A javascript based visualization engine which will render interactive charts and graphs based on the data.
+--
 MongoDB
 The resident No-SQL database which will serve as a fantastic data repository for our project.
+--
 keen.min.js
+--
 jquery
+--
 queue
+--
 python
+--
 javascript
+--
 HTML
+--
 CSS
